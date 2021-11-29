@@ -1,17 +1,17 @@
 const GetCustomer = async (email) => {
-  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com//api/customer/${email}`;
+  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com/api/customer/${email}`;
   const response = await fetch(CustomerApiUrl);
   const data = await response.json();
   return data;
 };
 const GetAllCustomers = async () => {
-  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com//api/customer`;
+  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com/api/customer`;
   const response = await fetch(CustomerApiUrl);
   const data = await response.json();
   return data;
 };
 const PostCustomer = async (firstName, lastName, birthdate, email, password) => {
-  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com//api/customer`;
+  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com/api/customer`;
   const response = await fetch(CustomerApiUrl,
     {
       method: "POST",
@@ -32,7 +32,7 @@ const PostCustomer = async (firstName, lastName, birthdate, email, password) => 
 };
 
 const DeleteCustomer = async (id) => {
-  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com//api/customer/${id}`;
+  const CustomerApiUrl = `https://pariveda-competition-api.herokuapp.com/api/customer/${id}`;
   const response = await fetch(CustomerApiUrl, {
     method: "DELETE"
   });
