@@ -1,0 +1,49 @@
+li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    padding: 0 !important;
+    list-style-type: none;
+}
+.section {
+    background-color:#F9F3DF;
+    min-height: 100vh;
+}
+.infoContainer{
+    max-width: 95vw !important;
+    padding-top: 100px !important;
+    display: block;
+}
+.row{
+    width: 100% !important;
+}
+.carouselContainer{
+    position: relative;
+    max-width: 70%;
+    display: inline-block;
+    
+}
+.leftCol{
+    position: relative !important;
+    height: 100vh !important;
+    text-align: center;
+}
+.textContainer{
+    left: 100vw;
+    display: block;
+}
+.details{
+    margin-top: 50px;
+}
+.buttonContainer{
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 50px 0;
+}
+.removeButton{
+    text-decoration: underline;
+    cursor: pointer;
+}

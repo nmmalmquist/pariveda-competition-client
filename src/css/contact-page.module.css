@@ -1,0 +1,13 @@
+.section {
+    background-color:#F9F3DF;
+    display: block;
+    text-align: center;
+    height: 90vh;
+}
+.formContainer{
+    max-width: 50vw !important;
+    padding-top: 100px ;
+}
+.buttonContainer{
+    margin-top: 40px;
+}

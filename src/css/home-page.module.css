@@ -1,0 +1,87 @@
+hr {
+    border-top: dotted rgb(70, 70, 70)!important;
+    border-width:30px!important;
+    display: flex!important;
+    margin: auto!important;
+    background-color: transparent!important;
+    width: 180px!important;
+  }
+  a{
+      text-decoration: none !important;
+      color: inherit !important;
+  }
+  button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  }
+  .hrContainer{
+      padding: 90px 0;
+  }
+
+.pageContainer{
+    max-width: 90vw !important;
+}
+.section {
+    background-color:#F9F3DF;
+    display: block;
+    
+}
+.containerFluid{
+    padding: 0 5vw;
+    background-color: transparent;
+}
+
+#aboutLink{
+    cursor: pointer;
+}
+
+
+.titleLogoContainer{
+    display: block;
+    width: 30vw;
+    height: 1fr;
+    margin: 0 auto ;
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+  
+}
+.titleLogo{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+   
+    
+}
+
+/* start of about section */
+.aboutContainer{
+    margin-top: 5vh;
+}
+.aboutText{
+    font-size: 22px;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+/* Start of carousel section */
+.titleCarousel{
+    width: 50vw;
+    height: 1fr;
+    margin: auto;
+    display: block;
+    padding: 7vh 0
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+.section{
+    width: 100vw;
+    min-height: 90vh;
+    background-color: #F9F3DF ;
+}
+
+.container{
+    padding-top: 10vh;
+}
+
+.fullCartContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.buyButton{
+    margin-top: 30px;
+}
+
+.title{
+    margin-bottom: 30px;
+}
+
+.totalCostContainer{
+    margin-top: 30px;
+}

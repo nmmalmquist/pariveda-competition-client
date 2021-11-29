@@ -1,0 +1,27 @@
+.navbarContainer{
+    max-width: 90vw !important;
+}
+.navItem{
+    margin: 0px 10px !important;
+    color: rgba(0,0,0,.55) !important
+}
+.navbarRightLinks{
+    position: absolute;
+    right: 5vw ;
+    top: 15px;
+    
+}
+.navItemList{
+    display: flex !important;
+}
+.navItemRight{
+    display: inline !important;
+    
+}
+
+.headerColor{
+    background-color: #F9F3DF;
+}
+.navItem:hover{
+    color: Black !important;
+}

@@ -1,0 +1,23 @@
+.container{
+    border: .2px solid black;
+    max-width: 40vh;
+    overflow-wrap: break-word;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.text{
+    margin-left: 5px;
+    width: 100%;
+}
+
+.X{
+    color:gray;
+    cursor: pointer;
+    margin: auto 20px;
+}

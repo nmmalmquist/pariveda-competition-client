@@ -1,0 +1,28 @@
+.list{
+    text-align: center;
+}
+.policyUl{
+    max-width: 30vw;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+}
+.policyLi{
+    list-style-type: square;
+}
+.policySection {
+    background-color:#F9F3DF;
+    position: relative;
+    max-width: none;
+    text-align: center;
+    
+}
+.policyText{
+    text-align: left;
+    margin-top: 40px;
+    padding-bottom: 10px;
+
+}
+.title{
+    padding-top: 30px;
+}

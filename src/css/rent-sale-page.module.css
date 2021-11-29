@@ -1,0 +1,17 @@
+.section {
+    background-color:#F9F3DF;
+    min-height: 100vh;
+}
+.cardListContainer{
+    max-width: 95vw !important;
+    text-align: center;
+    margin: 0 !important;
+    width: 100%;
+    display: inline-block !important;
+}
+.titleContainer{
+    max-width: 90vw;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    text-align: center;
+}

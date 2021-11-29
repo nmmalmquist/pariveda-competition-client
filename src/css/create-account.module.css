@@ -1,0 +1,68 @@
+.section{
+    background-color: #F9F3DF;
+    text-align: center;
+    min-height: 150vh;
+    position: relative;
+}
+
+.inputBox{
+    background-color: transparent;
+    border: 1px solid gray;
+}
+.content{
+    position: absolute;
+    top: 40%; 
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    margin-bottom: 200px;
+}
+.signInContainer{
+    width: 800px;
+    margin: -75px auto 0 auto ;
+    background-color: transparent;
+    padding:60px 40px;
+    border: .5px solid gray; 
+}
+.logo{
+   
+}
+.label{
+    color: black;
+
+}
+.buttonContainer{
+    margin-top: 30px;
+}
+.adminLink:hover{
+    color: gray !important;
+}
+.loginButton{
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+.loginButton:hover{
+    color: gray !important;
+}
+.formContainer{
+    display: flex;
+    flex-direction: row;
+}
+.rightInputContainer{
+    flex: 1;
+    margin-right: 30px;
+}
+.leftInputContainer{
+    flex: 1;
+}
+.divider{
+    width: 30px;
+}
+.title{
+    display:inline-block;
+    margin-bottom: 80px;
+    margin-top: -100px;
+}
+.errorMessage{
+    color: rgb(158, 14, 14);
+}

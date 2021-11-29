@@ -1,0 +1,12 @@
+.container{
+    margin: 30px;
+}
+
+.imageGroupContainer{
+    display: flex;
+    flex-direction: row;
+}
+.image{
+    width:8vw;
+    height: vh;
+}

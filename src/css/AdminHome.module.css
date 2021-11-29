@@ -1,0 +1,29 @@
+.section{
+    background-color: #F9F3DF;
+    width: 100vw;
+    min-height: 100vh;
+}
+.title{
+    margin-bottom: 10vh;
+}
+
+.container{
+    padding-top: 10vh;
+    text-align: center;
+}
+.column{
+    text-align: center !important;
+}
+.headers{
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 5vh;
+}
+.addButton{
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+}
+.listItemContainer{
+    margin: 5px 0;
+}

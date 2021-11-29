@@ -1,0 +1,15 @@
+.listItemTitle{
+    font-weight: bold;
+}
+.makeTouchable{
+    cursor: pointer;
+    transition: transform 0.6s;
+    display: inline-block;
+    padding: .5rem;
+}
+.makeTouchable:hover{
+    transform: scale(1.02);
+}
+.cost{
+    color: rgb(106, 180, 118);
+}

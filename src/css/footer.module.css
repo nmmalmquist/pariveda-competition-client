@@ -1,0 +1,31 @@
+.footer{
+    background-color: rgb(70, 70, 70);
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+}
+.footerText{
+    display: flex;
+    color: white;
+    margin: auto 0;
+}
+.footerListItem{
+    display: inline;
+    margin: 0 1vw;
+}
+
+.footerList{
+    flex-direction: row;
+}
+
+.socialMediaIconsContainer{
+    display: block;
+    position: absolute;
+    right: 100px;
+}
+
+.iconStyle{
+    color: white;
+    font-size: 28px;
+    margin: 0 1vw;
+}

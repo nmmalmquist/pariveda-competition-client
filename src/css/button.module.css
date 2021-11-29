@@ -1,0 +1,26 @@
+.button{
+    height: 100px;
+    width: 200px;
+    background-color: transparent;
+    border-radius: 20px;
+    border-width: 2px;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+.button:hover{
+    transform: scale(1.05);
+}
+.text{
+  
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+}

@@ -1,0 +1,65 @@
+.section{
+    background-color: gray;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inputBox{
+    background-color: transparent;
+    border: 1px solid #F9F3DF;
+}
+.content{
+    margin: auto;
+    display: flex;
+}
+.signInContainer{
+    width: 400px;
+    margin: -75px auto 0 auto ;
+    background-color: transparent;
+    padding:60px 40px;
+    border: .5px solid #F9F3DF;
+}
+.title{
+    color: #F9F3DF;
+    display: inline-block;
+    position: relative;
+    margin-top: 60px;
+     
+}
+.label{
+    color: #F9F3DF;
+
+}
+.adminLink{
+    position: absolute;
+    right:0;
+    transform: translate(-100%, -100%);
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.buttonContainer{
+    margin-top: 30px;
+    
+}
+.button{
+    color: #F9F3DF !important;
+    border-color: #F9F3DF !important;
+}
+
+
+.adminLink:hover{
+    color: gray !important;
+}
+.createAccount:hover{
+color: gray !important;
+}
+
+.invalidCredentials{
+    color: rgb(167, 27, 27);
+    
+}
