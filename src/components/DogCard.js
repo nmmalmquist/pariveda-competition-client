@@ -12,8 +12,13 @@ const DogCard = ({ dogData}) => {
   const [url, setUrl] = useState(null)
 
   const GetDogPicURL = async() => {
-    const thisUrl =  await getDownloadURL(ref(storage, `dogImages/${dogData.mainImageName}`))
-    setUrl(thisUrl);
+    try {
+      const thisUrl =  await getDownloadURL(ref(storage, `dogImages/${dogData.mainImageName}`))
+      setUrl(thisUrl);
+      
+    } catch (error) {
+      setUrl(null);
+    }
   }
   useEffect(() => {
     GetDogPicURL()
