@@ -1,5 +1,5 @@
 const PostPurchase = async (firstName, lastName, email, phone, cost) => {
-    const PurchaseApiUrl = `https://localhost:5001/api/purchase`;
+    const PurchaseApiUrl = `https://pariveda-competition-api.herokuapp.com//api/purchase`;
     const response = await fetch(PurchaseApiUrl,
       {
         method: "POST",
