@@ -93,7 +93,7 @@ const AdminHome = () => {
     }
     setShowDeleteAlert(false);
     setActiveItem({})
-    window.location.reload();
+    setTimeout(()=>{window.location.reload()}, 1000)
   }
 
   const handleAddCustomer = () => {

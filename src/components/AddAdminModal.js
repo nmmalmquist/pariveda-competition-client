@@ -35,7 +35,9 @@ const AddAdminModal = ({ visible, closeCallback }) => {
       if (response.status === 200) {
         alert("Your account has been made. Please Sign in.");
         closeCallback();
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       } else {
         alert("There was a problem creating your account. Try again");
       }
@@ -57,28 +59,52 @@ const AddAdminModal = ({ visible, closeCallback }) => {
       <Modal.Header>
         <Modal.Title>Create Admin Account</Modal.Title>
       </Modal.Header>
-      <Form className={styles.container} onSubmit={handleSubmit} >
+      <Form className={styles.container} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formFirstName">
           <Form.Label>First Name</Form.Label>
-          <Form.Control name="firstName" type="text" placeholder="First Name" onChange={handleChange} />
+          <Form.Control
+            name="firstName"
+            type="text"
+            placeholder="First Name"
+            onChange={handleChange}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formLastName">
           <Form.Label>Last Name</Form.Label>
-          <Form.Control name="lastName" type="text" placeholder="Enter email" onChange={handleChange} />
+          <Form.Control
+            name="lastName"
+            type="text"
+            placeholder="Enter email"
+            onChange={handleChange}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="Enter email" onChange={handleChange}/>
+          <Form.Control
+            name="email"
+            type="email"
+            placeholder="Enter email"
+            onChange={handleChange}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control name="password" type="password" placeholder="Password" onChange={handleChange}/>
+          <Form.Control
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+          />
         </Form.Group>
         <Modal.Footer>
           <Button variant="primary" type="submit">
             Create Admin Account
           </Button>
-          {accountAlreadyExists ? <h6 className={styles.error}>Sorry an account already exists with that email</h6> : null}
+          {accountAlreadyExists ? (
+            <h6 className={styles.error}>
+              Sorry an account already exists with that email
+            </h6>
+          ) : null}
         </Modal.Footer>
       </Form>
     </Modal>

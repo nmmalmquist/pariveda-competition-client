@@ -47,14 +47,12 @@ const AddDogModal = ({ visible, closeCallback }) => {
       ...data,
       saleType: "Rent",
     });
-    console.log(data);
   };
   const handleSaleTypeBuyChange = () => {
     setData({
       ...data,
       saleType: "Buy",
     });
-    console.log(data);
   };
 
   //Three api calls happen here. First it will send the non-image dog data to the MySQL DB, then it will API GET the dog just sent.
@@ -78,7 +76,9 @@ const AddDogModal = ({ visible, closeCallback }) => {
       if (fireBaseResponse === "SUCCESS") {
         alert(`Dog (${data.name}) has been created`);
         closeCallback();
+        setTimeout(() => {
           window.location.reload();
+        }, 1000);
       } else {
         alert(
           "dog data submited to MySQL but Pictures could not be uploaded to firebase."
@@ -109,22 +109,34 @@ const AddDogModal = ({ visible, closeCallback }) => {
       let mostRecentDog = await GetMostRecentDog();
 
       if (data.mainImage !== "") {
-        const storageRef = ref(storage, `dogImages/dog-pic-main-${mostRecentDog.id}.jpg`);
+        const storageRef = ref(
+          storage,
+          `dogImages/dog-pic-main-${mostRecentDog.id}.jpg`
+        );
         await uploadBytes(storageRef, data.mainImage);
         console.log("uploaded");
       }
       if (data.image1 !== "") {
-        const storageRef = ref(storage, `dogImages/dog-pic-image1-${mostRecentDog.id}.jpg`);
+        const storageRef = ref(
+          storage,
+          `dogImages/dog-pic-image1-${mostRecentDog.id}.jpg`
+        );
         await uploadBytes(storageRef, data.image1);
         console.log("uploaded");
       }
       if (data.image2 !== "") {
-        const storageRef = ref(storage, `dogImages/dog-pic-image2-${mostRecentDog.id}.jpg`);
+        const storageRef = ref(
+          storage,
+          `dogImages/dog-pic-image2-${mostRecentDog.id}.jpg`
+        );
         await uploadBytes(storageRef, data.image2);
         console.log("uploaded");
       }
       if (data.image3 !== "") {
-        const storageRef = ref(storage, `dogImages/dog-pic-image3-${mostRecentDog.id}.jpg`);
+        const storageRef = ref(
+          storage,
+          `dogImages/dog-pic-image3-${mostRecentDog.id}.jpg`
+        );
         await uploadBytes(storageRef, data.image3);
         console.log("uploaded");
       }
