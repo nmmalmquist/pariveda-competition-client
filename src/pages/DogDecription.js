@@ -91,22 +91,6 @@ const DogDescription = () => {
     GetDogPicURL();
   }, [dog]);
 
-  //purpose of function is to turn the individual image properties of the dog and make an array of the images, it checks is there exists a key with the image value
-  //only gets called if dog state has a value
-  // const GetPictureList = () => {
-  //   let thisDogImages = [images[dog.mainImageName].default];
-
-  //   if (dog.image1Name in images) {
-  //     thisDogImages = [...thisDogImages, images[dog.image1Name].default];
-  //   }
-  //   if (dog.image2Name in images) {
-  //     thisDogImages = [...thisDogImages, images[dog.image2Name].default];
-  //   }
-  //   if (dog.image3Name in images) {
-  //     thisDogImages = [...thisDogImages, images[dog.image3Name].default];
-  //   }
-  //   return thisDogImages;
-  // };
 
   const handleAddToCart = () => {
     //adds to the cartContext once the add to cart button is pressed

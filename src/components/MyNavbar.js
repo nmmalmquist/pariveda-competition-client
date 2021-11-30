@@ -3,26 +3,31 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import styles from "../css/my-navbar.module.css";
+import CartContext from "./CartContext";
 import ShoppingCartModal from "./ShoppingCartModal";
 import UserContext from "./UserContext";
+
 
 function MyNavbar() {
   //state to show the shopping cart or not
   const [showCart, setShowCart] = useState(false);
   const { user, setUser } = useContext(UserContext);
+  const { setCart } = useContext(CartContext);
   const handleClose = () => setShowCart(false);
   const handleShow = () => setShowCart(true);
 
   //Getting the user to display the email of who is signed in or not. state is used for the redering on screen. state is set to sessionStorage data.
   //The is an issue of on the first render, that user is null, so down in the component that uses user, there is a turnary operator that will reder whether a user exists or not
   const handleSignOut = () => {
-    sessionStorage.setItem("user", JSON.stringify({ email: "", password: "" }));
+    sessionStorage.setItem("customer", JSON.stringify({ email: "", password: "" }));
+    sessionStorage.setItem("admin", JSON.stringify({ email: "", password: "" }));
+    sessionStorage.removeItem("shoppingCart");
+    setCart([])
     setUser(null);
-    console.log(user);
   };
 
   useEffect(() => {
-    setUser(JSON.parse(sessionStorage.getItem("user")))
+    setUser(JSON.parse(sessionStorage.getItem("customer")))
   },[setUser])
 
   return (

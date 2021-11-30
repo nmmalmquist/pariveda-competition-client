@@ -13,7 +13,7 @@ const SignInCustomer = () => {
     password: "",
   });
   const [invalidCredentials, setInvalidCredentials] = useState(false);
-  const {setUser} = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const history = useHistory();
 
   const handleChange = (element) => {
@@ -38,13 +38,18 @@ const SignInCustomer = () => {
 
   const ValidateCredentials = (credentials) => {
     if (!credentials.deleted && loginData.password === credentials.password) {
-      //Go to the home page when signed in
-      history.push("/");
+      //update the userContext and cookies with the now validated user
+      setUser({ email: loginData.email, password: loginData.password });
+      sessionStorage.setItem("customer", JSON.stringify(loginData));
+      //Go to the home page or purchase page depending if a shopping cart is active on sign in
+      if (sessionStorage.getItem("shoppingCart")) {
+        history.push("/purchase");
+      } else {
+        history.push("/");
+      }
       //update the userContext with the now validated user
-      setUser({email: loginData.email, password: loginData.password})
-      console.log(loginData)
-      sessionStorage.setItem("user", JSON.stringify(loginData))
-
+      setUser({ email: loginData.email, password: loginData.password });
+      sessionStorage.setItem("customer", JSON.stringify(loginData));
     } else {
       setInvalidCredentials(true);
     }
@@ -53,7 +58,7 @@ const SignInCustomer = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <img src={logo} className={styles.logo} alt="logo" />
+        <img onClick={()=>{history.push("/")}} src={logo} className={styles.logo} alt="logo" />
         <div className={styles.signInContainer}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formEmail">

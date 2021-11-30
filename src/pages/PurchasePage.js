@@ -21,6 +21,12 @@ const PurchasePage = () => {
       costTotal += cart[i].cost;
     }
   }
+ //On every render, will check to see if a customer is logged in, if not, it will make a person sign in
+  const customerUser = JSON.parse(sessionStorage.getItem("customer"))
+  if (customerUser === null || customerUser["email"] === "")
+  {
+    history.push("/loginCustomer")
+  }
 
   const showModal = () => {
     setIsModalVisible(true);

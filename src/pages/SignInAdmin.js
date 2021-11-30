@@ -37,6 +37,9 @@ const SignInAdmin = () => {
 
   const ValidateCredentials = (credentials) => {
     if (!credentials.deleted && loginData.password === credentials.password) {
+      //Set both the customer and admin session in cookies
+      sessionStorage.setItem("admin", JSON.stringify(loginData));
+      sessionStorage.setItem("customer", JSON.stringify(loginData));
       //Go to the home page when signed in
       history.push("/admin");
       //update the userContext with the now validated user
@@ -48,7 +51,7 @@ const SignInAdmin = () => {
 
   return (
     <section className={styles.section}>
-        <h1 className={styles.title}>Admin Sign In</h1>
+      <h1 className={styles.title}>Admin Sign In</h1>
       <div className={styles.content}>
         <div className={styles.signInContainer}>
           <Form onSubmit={handleSubmit}>

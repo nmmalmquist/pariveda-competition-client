@@ -28,6 +28,7 @@
 .logo{
     margin-top: -80px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 .label{
     color: black;

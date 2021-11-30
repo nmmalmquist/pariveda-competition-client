@@ -24,6 +24,13 @@ const AdminHome = () => {
   const history = useHistory();
   let maxDogId = 0;
 
+  //Checks to see if an admin is logged in or not everytime a re-render happens. If not, then it will kick out of admin page
+  const adminUser = JSON.parse(sessionStorage.getItem("admin"))
+  if (adminUser === null || adminUser["email"] === "")
+  {
+    history.push("/loginAdmin")
+  }
+
 
   //gets called on first render b/c of the empty []
   useEffect(() => {

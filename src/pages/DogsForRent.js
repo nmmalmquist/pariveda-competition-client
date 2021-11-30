@@ -33,7 +33,7 @@ const DogsForRent = () => {
 
       {loading ? <LoadingAnimation height={300} width={500} /> : null}
 
-      <Container className={styles.CardListContainer}>
+      <Container className={styles.cardListContainer}>
         {nonDeletedDogs.map((dog) => (
           <DogCard key={dog.id} dogData={dog} />
         ))}
