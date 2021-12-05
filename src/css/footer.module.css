@@ -2,16 +2,20 @@
     background-color: rgb(70, 70, 70);
     padding: 3vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .footerText{
     display: flex;
     color: white;
     margin: auto 0;
+    flex: 1;
 }
 .footerListItem{
     display: inline;
     margin: 0 1vw;
+}
+.footerListItem:hover{
+    color: gray;
 }
 
 .footerList{
@@ -20,10 +24,13 @@
 
 .socialMediaIconsContainer{
     display: block;
-    position: absolute;
-    right: 100px;
+    position: relative;
+    
 }
-
+.container{
+    display: flex;
+    width: 100%;
+}
 .iconStyle{
     color: white;
     font-size: 28px;

@@ -120,17 +120,17 @@ const AdminHome = () => {
         <Row>
           <Col xs={6} className={styles.column}>
             <div className={styles.addButton}>
-              <AdminAddButton onClick={handleShowAddDogModal}/>
+              <AdminAddButton text="+Add Dog" onClick={handleShowAddDogModal}/>
             </div>
           </Col>
           <Col xs={3} className={styles.addButton}>
             <div className={styles.addButton}>
-              <AdminAddButton onClick={handleAddCustomer}/>
+              <AdminAddButton text="+Add Customer" onClick={handleAddCustomer}/>
             </div>
           </Col>
           <Col xs={3} className={styles.addButton}>
             <div className={styles.addButton}>
-              <AdminAddButton onClick={handleAddAdmin}/>
+              <AdminAddButton text="+Add Admin" onClick={handleAddAdmin}/>
             </div>
           </Col>
         </Row>

@@ -58,7 +58,14 @@ const SignInCustomer = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <img onClick={()=>{history.push("/")}} src={logo} className={styles.logo} alt="logo" />
+        <img
+          onClick={() => {
+            history.push("/");
+          }}
+          src={logo}
+          className={styles.logo}
+          alt="logo"
+        />
         <div className={styles.signInContainer}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formEmail">
@@ -97,9 +104,11 @@ const SignInCustomer = () => {
               </Button>
             </div>
           </Form>
-          <Link className={styles.adminLink} to="/loginAdmin">
-            Admin sign in?
-          </Link>
+          <div className={styles.adminLinkContainer}>
+            <Link className={styles.adminLink} to="/loginAdmin">
+              Admin sign in?
+            </Link>
+          </div>
         </div>
       </div>
     </section>

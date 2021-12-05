@@ -37,7 +37,6 @@ const AddDogModal = ({ visible, closeCallback }) => {
         ...data,
         [element.target.name]: element.target.value.trim(),
       });
-      console.log(data);
     }
   };
 
